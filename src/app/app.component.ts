@@ -19,7 +19,7 @@ export class AppComponent {
   // To call external API
    constructor(private http: HttpClient){}
    add(a: number, b: number):void {
-     this.http.get<number>(`https://9devtopapical.azurewebsites.net/api/values/cong/${a}/${b}`).subscribe(kq => {
+     this.http.get<number>(`https://9devtopapical.azurewebsites.net/api/cal/cong/${a}/${b}`).subscribe(kq => {
        this.ketqua = kq;
        console.log(`API ${a} + ${b} = ${this.ketqua}`);
      });
