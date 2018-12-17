@@ -8,20 +8,20 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AppComponent {
-  title : string = 'NineDevDemo';
+  title : string = 'NineDevDemo Call-Azure-Api';
   ketqua : number = 0;
-
+/*
   add(a: number, b: number):void {
     this.ketqua = a + b;
     console.log(`${a} + ${b} = ${this.ketqua}`);
   }
-
+*/
   // To call external API
-  // constructor(private http: HttpClient){}
-  // add(a: number, b: number):void {
-  //   this.http.get<number>(`https://localhost:44371/api/values/cong/${a}/${b}`).subscribe(kq => {
-  //     this.ketqua = kq;
-  //     console.log(`API ${a} + ${b} = ${this.ketqua}`);
-  //   });
-  // }
+   constructor(private http: HttpClient){}
+   add(a: number, b: number):void {
+     this.http.get<number>(`https://9devtopapical.azurewebsites.net/api/values/cong/${a}/${b}`).subscribe(kq => {
+       this.ketqua = kq;
+       console.log(`API ${a} + ${b} = ${this.ketqua}`);
+     });
+   }
 }
