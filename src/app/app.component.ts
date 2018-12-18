@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AppComponent {
-  title : string = 'NineDevDemo';
+  title : string = 'NineDevDemo - Deploy Google Cloud';
   ketqua : number = 0;
 
   add(a: number, b: number):void {

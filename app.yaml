@@ -1,0 +1,8 @@
+runtime: nodejs10
+service: calculatorservice
+handlers:
+- url: /
+  static_files: dist/NineDevDemo/index.html
+  upload: dist/NineDevDemo/index.html
+- url: /
+  static_dir: dist/NineDevDemo
